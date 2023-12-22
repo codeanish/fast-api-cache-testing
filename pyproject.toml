@@ -10,6 +10,8 @@ packages = [{include = "fast_api_cache_testing"}]
 python = "^3.10"
 fastapi = "^0.105.0"
 uvicorn = "^0.25.0"
+requests = "^2.31.0"
+redis = "^5.0.1"
 
 
 [build-system]
