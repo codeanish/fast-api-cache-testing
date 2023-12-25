@@ -10,3 +10,5 @@ I was able to test out my API performance using curl and a timer as follows
 `curl http://localhost:8000/zipcode/90210 -s -o /dev/null -w  "%{time_starttransfer}\n"`
 
 Repeating the above command a couple of times would ensure that the data has made it into the cache and then returns much faster. This is a pretty big performance improvement where we're running into long running services. In my benchmarks, it was ~ 15x faster once it had been cached in redis vs outside of the cache. 
+
+Implement TTL on Redis cache. Adding a TTL means things fall out of the cache at a cert
